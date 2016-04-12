@@ -1,0 +1,10 @@
+Package: betaplot
+Type: Package
+Title: Visualizing linear models
+Version: 0.1
+Author: Martin Schmettow
+Maintainer: Martin Schmettow <schmettow@web.de>
+Description: A set of illustrated standard plots for linear models.
+License: GPL3
+LazyData: TRUE
+RoxygenNote: 5.0.1

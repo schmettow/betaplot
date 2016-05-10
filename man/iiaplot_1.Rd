@@ -2,26 +2,30 @@
 % Please edit documentation in R/betaplot.R
 \name{iiaplot_1}
 \alias{iiaplot_1}
-\title{Illustrated interaction plot 1}
+\title{Illustrated ANOVA}
 \usage{
-iiaplot_1(fixef = c(b_0 = 0, b_1 = -8, b_2 = 1, b_3 = 2), range = c(0, 10),
-  groups = c("A", "B"))
+iiaplot_1(fixef = list(b_0 = 8, b_1 = -1, b_2 = 2), groups = c("A", "B",
+  "C"), label = c("group", "outcome"))
 }
 \arguments{
-\item{fixef}{vector of four coefficients b_0 - b_3, see Details}
+\item{fixef}{list of three coefficients b_0, b_1, b_3, see Details}
 
-\item{range}{a vector of two values c(xmin, xmax)}
+\item{groups}{a vector of three strings, like c("A", "B", "C)}
 
-\item{groups}{a vector of two strings, like c("A", "B")
+\item{label}{vector of strings ("group", "outcome")
 
-This function plots a standard interaction diagram for a model with one covariate and two groups. This model has the following parameters:
+This function plots a diagram for an ANOVA model with
+three groups.
+This model has the following parameters:
 
-b_0 is the intercept, the expected value of the reference group, i.e. the first element in argument groups ("A").
-b_1 is the grand difference towards the second group (b_2 = 0)
-b_2 is the slope of reference group
-b_3 is the interaction effect, which is the  difference in slope towards the reference group
+b_0 is the intercept, the expected value of the reference group,
+i.e. the first element in argument groups ("A").
+b_1 and B_2 are the mean differences
 
-The line plot is augmented with illustrations, showing the two group effects b_0 and b_1 as vertical bars and the slope parameters as triangles.}
+The parameters can also be given as an unnamed list, as long as the elements comply to the order.
+
+The line plot is augmented with illustrations, showing the two group effects
+b_0 and b_1 as vertical bars and the slope parameters as triangles.}
 }
 \description{
 plots a diagram for a linear model with one dichtotomous group and a metric
